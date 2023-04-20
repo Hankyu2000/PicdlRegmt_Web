@@ -5,7 +5,7 @@ export default function Layout({children}){
     return(
         <>
             <Head>
-                <title>ピカデリー</title>
+                <title>ピカデリー軍集団</title>
             </Head>
             <header>
                 <div className="navbar bg-base-100">
@@ -14,19 +14,20 @@ export default function Layout({children}){
                     </div>
                     <div className="flex-none">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link href="/about/kirov">About Kirov</Link></li>
-                            <ul tabIndex="0">
+                            <li><Link href="/about/kirov">モルトーク置き場</Link></li>
+                            <li tabIndex="0">
                                 <a>About</a>
                                 <ul className="p-2 bg-base-100">
-                                    <li><Link href="/about/kirov">About Kirov</Link></li>
-                                    <li><Link href="/about/Kairi">About Kairi</Link></li>
+                                    <li><Link href="/about/kirov">キーロフについて</Link></li>
+                                    <li><Link href="/about/Kairi">カイリについて</Link></li>
                                 </ul>
-                            </ul>
+                            </li>
+                            <li><Link href="/forces">我々の編成</Link></li>
                         </ul>
                     </div>
                 </div>
             </header>
-            <div>
+            <div className="m-5">
                 {children}
             </div>
         </>
