@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+.heading{
+    @apply md:text-5xl text-2xl;
+}
+

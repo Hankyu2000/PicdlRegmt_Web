@@ -1,9 +1,11 @@
 import styles from './layout.module.css'
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script"
 export default function Layout({children}){
     return(
         <>
+            <Script src="https://unpkg.com/budoux/bundle/budoux-ja.min.js"></Script>
             <Head>
                 <title>ピカデリー軍集団</title>
             </Head>
@@ -15,7 +17,7 @@ export default function Layout({children}){
                     </div>
                     <div className="flex-none">
                         <ul className="menu menu-horizontal px-1">
-                            <li><Link href="/about/kirov">我々の睡眠</Link></li>
+                            <li><Link href="/task">我々の任務</Link></li>
                             <li tabIndex="0">
                                 <a>指揮官の声</a>
                                 <ul className="p-2 bg-base-300">
@@ -29,7 +31,7 @@ export default function Layout({children}){
                     </div>
                 </div>
             </header>
-            <main className="m-5">
+            <main className="m-5 bg-base-100">
                 {children}
             </main>
         </>
